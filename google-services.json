@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1002069294027",
+    "firebase_url": "https://cricker-11204-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "cricker-11204",
+    "storage_bucket": "cricker-11204.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1002069294027:android:7aa8316e0834b078ec544e",
+        "android_client_info": {
+          "package_name": "com.example.cricker.test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1002069294027-q7fjlhmlid3sq7p5c4em7d8qdbbcei7c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbai1aXKz9RLvRssvqiinaQGgzuU90dqk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1002069294027-q7fjlhmlid3sq7p5c4em7d8qdbbcei7c.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1002069294027-cvobktrg31s3pf8vtatsd26nt7pheufl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.cricker.test"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
