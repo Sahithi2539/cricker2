@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
-import '../upload/storage.dart';
+import 'package:cricker/addcriminals/upload/storage.dart';
 import 'package:path/path.dart';
 
 class Home extends StatefulWidget {

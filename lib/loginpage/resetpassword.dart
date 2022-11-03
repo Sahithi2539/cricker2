@@ -69,14 +69,11 @@ class _resetState extends State<reset> {
             image: AssetImage('assets/register.png'), fit: BoxFit.cover),
       ),
       child: Scaffold(
+        backgroundColor: Colors.transparent,
         body: Column(
           children: [
-            Container(
-              margin: EdgeInsets.only(top: 20.0),
-              child: Text(
-                'Reset Link will be sent to your email id !',
-                style: TextStyle(fontSize: 20.0),
-              ),
+            SizedBox(
+              height: 300,
             ),
             Expanded(
               child: Form(

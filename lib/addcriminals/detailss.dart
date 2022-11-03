@@ -84,13 +84,13 @@ class _detailssState extends State<detailss> {
   final formKey = GlobalKey<FormState>();
   TextEditingController name = TextEditingController();
   TextEditingController img = TextEditingController();
-  TextEditingController address = TextEditingController();
+  TextEditingController pincode = TextEditingController();
 
   sendData() async {
     await FirebaseFirestore.instance.collection('criminals').add({
       'name': name.text,
       'img': url1,
-      'address': address.text,
+      'address': pincode.text,
     });
   }
 
@@ -146,10 +146,11 @@ class _detailssState extends State<detailss> {
                   Padding(
                     padding: EdgeInsets.all(25),
                     child: TextFormField(
-                      controller: address,
+                      controller: pincode,
                       decoration: InputDecoration(
-                        labelText: "Enter address",
+                        labelText: "Enter Pincode",
                       ),
+                      keyboardType: TextInputType.number,
                     ),
                   ),
                   Padding(

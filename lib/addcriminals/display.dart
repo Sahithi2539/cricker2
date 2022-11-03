@@ -1,6 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:cricker/addcriminals/details.dart';
-import 'package:cricker/attendence/verification.dart';
+import 'package:cricker/attendence/location.dart';
 import 'package:cricker/read%20data/get_user_name.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -63,9 +62,8 @@ class _displayState extends State<display> {
                         return Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: ListTile(
-                            leading: CircleAvatar(
+                            leading: const CircleAvatar(
                               radius: 40,
-                              backgroundImage: NetworkImage(docIDs[index]),
                               // child: // fit: BoxFit.fill,
                             ),
                             title: GetUserName(documentId: docIDs[index]),
@@ -77,7 +75,7 @@ class _displayState extends State<display> {
                                 Navigator.push(
                                   context,
                                   new MaterialPageRoute(
-                                      builder: (context) => verification()),
+                                      builder: (context) => HomePage()),
                                 );
                               },
                             ),
