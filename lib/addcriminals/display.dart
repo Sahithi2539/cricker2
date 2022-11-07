@@ -1,5 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:cricker/addcriminals/image.dart';
 import 'package:cricker/attendence/location.dart';
+import 'package:cricker/read%20data/get_profile.dart';
 import 'package:cricker/read%20data/get_user_name.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +18,8 @@ class display extends StatefulWidget {
 }
 
 class _displayState extends State<display> {
+  String url1 =
+      "https://firebasestorage.googleapis.com/v0/b/cricker-11204.appspot.com/o/photos%2F2022-11-03T21%3A10%3A55.036996?alt=media&token=ece6e757-c4c0-46ac-934d-87c3bd7ff361";
   final controllerName = TextEditingController();
   final controllerAge = TextEditingController();
   final controllerCriminalid = TextEditingController();
@@ -39,12 +43,6 @@ class _displayState extends State<display> {
   }
 
   @override
-  void initState() {
-    getDocId();
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
           title: Text('Records'),
@@ -62,8 +60,11 @@ class _displayState extends State<display> {
                         return Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: ListTile(
-                            leading: const CircleAvatar(
-                              radius: 40,
+                            leading: CircleAvatar(
+                              radius: 50,
+                              backgroundImage: NetworkImage(
+                                url1, // GetProfile(documentId: docIDs[index]).toString(),
+                              ),
                               // child: // fit: BoxFit.fill,
                             ),
                             title: GetUserName(documentId: docIDs[index]),
@@ -72,10 +73,11 @@ class _displayState extends State<display> {
                             trailing: ElevatedButton(
                               child: new Text('Incomplete'),
                               onPressed: () {
+                                String value = docIDs[index];
                                 Navigator.push(
                                   context,
                                   new MaterialPageRoute(
-                                      builder: (context) => HomePage()),
+                                      builder: (context) => HomePage(value : value)),
                                 );
                               },
                             ),
